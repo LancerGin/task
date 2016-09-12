@@ -1,0 +1,36 @@
+body {
+	font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+body * {
+	font-size:  1em;
+}
+a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#navigation a {
+	text-decoration:  none;
+	font-weight:      bold;
+}
+#content {
+	line-height:1.8em;
+}
+#content p {
+	margin:  1em 0;
+	font-size:    130%;
+}
+#content h1 {
+	font-family:"华文琥珀";
+}
+h1 {
+	font:  2.4em  normal;
+}
+h2 {
+	font:  1.8em  normal;
+	margin-top:    1em;
+}
+h3 {
+	font:  1.4em  normal;
+	margin-top:    1em;
+}
