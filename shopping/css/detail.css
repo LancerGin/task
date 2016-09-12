@@ -1,0 +1,232 @@
+﻿@import url("base.css");
+@import url("header.css");
+@import url("nav.css");
+
+#content {
+	border: 1px solid #AAAAAA;
+	margin: 10px auto;
+	width: 800px;
+}
+#content h3 {
+	background: #3B5998;
+	color: #FFFFFF;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 8px;
+}
+.pro_detail {
+	width: 780px;
+	height: auto;
+	overflow: hidden;
+	padding: 10px;
+}
+/*左列*/
+.pro_detail_left {
+	width: 380px;
+	float: left;
+	overflow: hidden;
+}
+.pro_detail_left .jqzoom {
+	border: 1px solid #AAAAAA;
+	float: left;
+	height: 310px;
+	padding: 0;
+	position: relative;
+	cursor: pointer;
+}
+.pro_detail_left span {
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 310px;
+	clear: both;
+}
+#datu img {
+	cursor: pointer;
+}
+#xijie {
+	width: 310px;
+	height: 85px;
+	margin-bottom: 10px;
+}
+#xijie ul li {
+	float: left;
+	border: 0.5px solid #EEEEEE;
+	margin-right: 8px;
+	height: 70px;
+	width: 70px;
+	cursor: pointer;
+}
+#xijie ul li:hover {
+	border: 1px solid #333333;
+}
+#xijie ul li img {
+	max-width: 70px;
+}
+.tab_menu {
+	height: 28px;
+}
+.tab_menu ul li {
+	float: left;
+	margin-right: 5px;
+	height: 27px;
+	line-height: 27px;
+	cursor: pointer;
+}
+.presel {
+	border: 1px solid #AAAAAA;
+	border-bottom: 0;
+	background-color: #EEEEEE;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+.hover{
+	background-color: #CCCCCC;
+}
+.tab_menu .selected {
+	color: #FFFFFF;
+	background-color: #3B5998;
+}
+.tab_box {
+	border: 1px solid #AAAAAA;
+}
+.tab_box .hide {
+	display: none;
+}
+.tab_box table {
+	width:320px;
+	margin: 5px 30px 5px 30px;
+	text-align: center;
+	border-collapse: collapse;
+}
+.tab_box table td {
+	border: 1px solid #3B5998;
+	
+}
+/*右列*/
+.pro_detail_right {
+	width: 380px;
+	float: left;
+	margin: 10px;
+}
+.pro_detail_right p {
+	line-height: 22px;
+}
+.yschoose {
+	height:80px;
+}
+.yschoose ul li {
+	margin-right: 8px;
+	float: left;
+	height:36px;
+	border: 1px solid #CCCCCC;
+	padding: 1px;
+	cursor: pointer;
+}
+.yschoose ul li img {
+	min-width:36px;
+}
+.yschoose ul li:hover {
+	padding: 0;
+	border: 2px solid #AAAAAA;
+}
+.ccchoose {
+	height: 70px;
+}
+.ccchoose ul li {
+	width:42px;
+	height: 28px;
+	text-align: center;
+	line-height: 28px;
+	border: 1px solid #AAAAAA;
+	margin: 4px;
+	float: left;
+	cursor: pointer;
+}
+.ccchoose ul li:hover {
+	background-color: #CCCCCC;
+}
+.slchoose {
+	height:50px;
+}
+.slchoose select {
+	width:50px;
+}
+/*评分*/
+.pf {
+	height: 50px;
+	width: 380px;
+}
+.rating {
+	width: 80px;
+	height: 16px;
+	position: relative;
+	background: url(../img/star-matrix.gif) no-repeat 0 0;
+}
+.nostar {background-position:0 0}
+.onestar {background-position:0 -16px}
+.twostar {background-position:0 -32px}
+.threestar {background-position:0 -48px}
+.fourstar {background-position:0 -64px}
+.fivestar {background-position:0 -80px}
+.rating li {
+	float: left;
+	cursor: pointer;
+	text-indent: -999em;
+}
+.rating li a {
+	position:absolute;
+	left:0;
+	top:0;
+	width:16px;
+	height:16px;
+	text-decoration:none;
+	z-index: 200;
+}
+.rating li.one a {left:0}
+.rating li.two a {left:16px;}
+.rating li.three a {left:32px;}
+.rating li.four a {left:48px;}
+.rating li.five a {left:64px;}
+.rating li a:hover {
+	z-index:2;
+	width:80px;
+	height:16px;
+	overflow:hidden;
+	left:0;	
+	background: url(../img/star-matrix.gif) no-repeat 0 0
+}
+.rating li.one a:hover {background-position:0 -96px;}
+.rating li.two a:hover {background-position:0 -112px;}
+.rating li.three a:hover {background-position:0 -128px;}
+.rating li.four a:hover {background-position:0 -144px;}
+.rating li.five a:hover {background-position:0 -160px;}
+
+/*jQzoom*/
+div.zoomdiv {
+	z-index:	999;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 200px;
+	height: 200px;
+	background: #ffffff;
+	border:1px solid #CCCCCC;
+	display:none;
+	text-align: center;
+	overflow: hidden;
+}
+div.jqZoomPup {
+	z-index: 999;
+	visibility: hidden;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #aaa;
+	background: #ffffff url(../img/zoomlens.gif) 50% top  no-repeat;;
+	opacity: 0.5;
+	filter: alpha(Opacity=50);
+}
