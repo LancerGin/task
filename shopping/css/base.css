@@ -1,0 +1,27 @@
+* {
+	margin:0;
+	padding: 0;
+	word-wrap: break-word;        /*允许长文本换行*/
+	word-break: break-all;        /*在恰当的断点处换行*/
+}
+body {
+	background: #fff;
+	color: #333;
+	font: 12px/1.6em helvetica,arial,sans-serif;
+}
+a {
+	color: #0287CA;text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul,li {
+	list-style: none;
+}
+img {
+	border: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size: 1em;
+}
+

@@ -1,0 +1,9 @@
+$(function(){
+	$(".module_up_down").toggle(function(){
+		$(this).prev().slideToggle(600);
+		$(this).children().attr("src","img/up.gif");
+	},function(){
+		$(this).prev().slideToggle(600);
+		$(this).children().attr("src","img/down.gif");
+	});
+});
