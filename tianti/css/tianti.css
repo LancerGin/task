@@ -1,0 +1,584 @@
+body{
+	font-family: "微软雅黑";
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,img {
+		padding:0;margin:0;
+}
+.btn:focus{
+	outline: 0 !important;
+}
+li{	
+	list-style: none;
+}
+a,a:hover,a:active,a:focus{
+	text-decoration: none;
+}
+/* 移动端导航 侧边栏 */
+@-webkit-keyframes bounce-in {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(1000px);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translateX(-30px);
+	}
+	80% {
+		-webkit-transform: translateX(10px);
+	}
+	100% {
+		-webkit-transform: translateX(0); 
+	}
+}
+@keyframes bounce-in {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(1000px);
+		transform: translateX(1000px);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translateX(-30px);
+		transform: translateX(-30px);
+	}
+	80% {
+		-webkit-transform: translateX(10px);
+		transform: translateX(10px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+.bounce-in {
+	-webkit-animation-name: bounce-in;
+	animation-name: bounce-in;
+}
+
+@-webkit-keyframes bounce-out {
+	0% {
+		-webkit-transform: translateX(0);
+	}
+	20% {
+		opacity: 1;
+		-webkit-transform: translateX(-20px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(1000px);
+	}
+}
+@keyframes bounce-out {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	20% {
+		opacity: 1;
+		-webkit-transform: translateX(-20px);
+		transform: translateX(-20px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(1000px);
+		transform: translateX(1000px);
+	}
+}
+.bounce-out {
+	-webkit-animation-name: bounce-out;
+	animation-name: bounce-out;
+}
+#mobile-navbar-collapse {
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	right: 200%;
+	height: 100%;
+	max-width: 300px;
+	z-index: 99;
+	overflow-y: auto;
+	/*padding-right: 50px;*/
+	padding-top: 15px;
+	background-color: rgba(44, 62, 80, 0.95);
+}
+#mobile-navbar-collapse.bounce-in,
+#mobile-navbar-collapse.bounce-out {
+	width: 100%;
+	left: auto;
+	right: -50px;
+	-webkit-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+#mobile-navbar-collapse li a {
+	display: inline-block;
+	padding-left: 85px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: left;
+	color: #fff;	
+	font-size: 14px;
+}
+#mobile-navbar-collapse li a:hover,
+#mobile-navbar-collapse li a:active,
+#mobile-navbar-collapse li a:focus {
+	color: #808b96;
+	text-decoration: none;
+}
+#mobile-navbar-collapse li.user a.login {
+	padding-right: 5px;
+}
+#mobile-navbar-collapse li.user a.register {
+	padding-left: 5px;
+}
+#mobile-navbar-collapse .dropdown .dropdown-menu {
+	float: none;
+	/*display: none;*/
+	position: static;
+	margin: 0;
+	padding-left: 15px;
+	background-color: transparent;
+	border: 0 none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+/*移动设备样式 !开始*/
+/*nav*/
+#nav{
+	height: 60px;
+	line-height: 60px;
+	background: #48609E;
+	position:fixed;
+	top: 0;
+	z-index: 9;
+	width: 100%;
+}
+#nav img{
+	width: 100px;
+}
+#nav .navbar-toggle {
+	margin: 0;
+	padding: 0;
+	padding-top: 22px;
+	padding-bottom: 22px;
+}
+#nav .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+/*移动游戏深度分析*/
+#introduce {
+	background:#48609E url(../img/carousel-ct.png) center no-repeat;
+	background-size: 1000px;
+}
+#introduce .col-lg-10{	
+	padding-top: 110px;	
+	padding-bottom: 40px;
+}
+#introduce .col-lg-10 h1{
+	font-size: 2rem;
+	line-height: 54px;
+	color: white;
+}
+#introduce .col-lg-10 p{
+	width: 62%;
+	margin-top: 10px;
+	font-size: 1.4rem;
+	color: #C6CBD8;
+}
+#introduce .col-lg-10 p button{
+	font-size: 1.4rem;
+	margin-top: 12px;
+	line-height: 20px;
+	color: white;
+	background: #0E9E7A;
+}
+/*支持主流游戏开发平台*/
+#angle_down{
+	height: 59px;
+	position: relative;
+	text-align: center;
+	background: #48609E;
+}
+#angle_down .down {
+	display: block;
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+	position: absolute;
+	bottom: -21px;
+	left: 50%;
+	z-index: 8;
+	margin-left: -21px;
+	background: white;
+	border-radius: 21px;
+	box-shadow:0px 1px 1px #CFD2D4;
+}
+#support {
+	
+	background: #FAFAFA;
+	text-align: center;
+}
+#support h1{
+	padding-top: 28px;
+	margin-bottom: 24px;
+	font-size:2rem;
+}
+#support p{
+	clear: both;
+	margin-top: 80px;
+	margin-bottom: 30px;
+	line-height: 18px;
+	font-size:1.2rem;
+	color: #909090;
+}
+#support ul{
+	width: 300px;
+}
+#support ul li{	
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.6rem;	
+}
+#support ul li a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	border: 1px solid #4D7DB1;
+	border-radius: 20px;
+	color: white;
+	background: #4D7DB1;
+}
+#support ul li a:hover{
+	color:#4D7DB1;
+	background: white;
+}
+/*详细游戏数据分析*/
+#content .row:nth-child(1){	
+	padding-top: 20px;
+	padding-bottom: 30px;
+	color: #586062;
+}
+#content .row:nth-child(2){	
+	padding-top: 20px;
+	padding-bottom: 30px;
+	background: #4679AE;
+	color: white;
+}
+#content .row:nth-child(3){
+	padding-top: 20px;
+	padding-bottom: 30px;
+	color: #586062;
+}
+#content .row:nth-child(4){
+	padding-top: 20px;
+	padding-bottom: 30px;
+	background: #4679AE;
+	color: white;
+}
+#content .row:nth-child(5){
+	padding-top: 20px;
+	padding-bottom: 30px;
+	color: #586062;
+}
+#content .row:nth-child(6){
+	padding-top: 20px;
+	padding-bottom: 30px;
+	background: #4679AE;
+	color: white;
+}
+#content .row h2{
+	font-size:2rem ;
+	line-height: 60px;
+}
+#content .row p{
+	font-size: 1.4rem;
+	margin-bottom: 16px;
+}
+/*移动App*/
+#mobile {
+	color: #586062;	
+	background:url(../img/mobile.png) center no-repeat;
+	background-size: 1000px;
+}
+#mobile .col-lg-10 {
+	padding: 80px 20px;
+}
+#mobile .col-lg-10 h1 {
+	font-size: 2rem;
+	line-height: 60px;
+	
+}
+#mobile .col-lg-10 p {
+	font-size: 1.4rem;
+	margin-bottom: 30px;
+}
+#mobile button {
+	margin-bottom: 18px;
+	border-radius: 4px;
+}
+
+#mobile .download_btn button{
+	margin-bottom: 80px;
+	color: white;
+	background: #0E9E7A;	
+}
+/*footer*/
+#footer {
+	
+	background: #34495E;
+	color: white;
+	text-align: center;
+}
+#footer img{
+	width: 110px;
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+#footer h3{
+	font-size: 1.6rem;
+}
+#footer p{	
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+#footer a{
+	font-size: 1.3rem;
+	color: white;
+	display: inline-block;
+	margin: 10px;
+	padding: 8px 18px;
+	border-radius: 4px;
+}
+#footer a:nth-child(1){
+	background: #0E9E7A;
+	border: 1px solid #0E9E7A;
+}
+#footer a:nth-child(2){
+	border: 1px solid white;
+}
+#footer a:nth-child(1):hover{
+	text-decoration: none;
+	background: #0C906F;
+	border: 1px solid #0C906F;
+}
+#footer a:nth-child(2):hover{
+	text-decoration: none;
+	color: #0C906F;
+	border: 1px solid #0C906F;
+}
+/*copyright*/
+#copyright{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 20px;
+	background: #2C3E50;
+	color: #969FA8;
+	font-size: 1.1rem;
+}
+/*移动设备样式 !结束*/
+/*平板电脑及台式机样式 !开始*/
+@media only screen and (min-width: 768px) {
+	
+/*nav*/
+#nav{
+	height: 100px;
+	line-height: 100px;	
+}
+#nav img{
+	width: 144px;
+}
+#nav ul li{
+	float: left;
+	color: white;
+	padding-right: 36px;
+	font-size: 1.8rem;
+}
+#nav ul li a{
+	color: white;	
+}
+#nav ul li a:hover{
+	text-decoration: none;
+	color:#AFC2D3;
+}
+#nav .log span{
+	padding-left:8px;
+	padding-right:8px;
+}
+/*移动游戏深度分析*/
+#introduce {
+	height: 780px;
+	background-size: 1500px;
+}
+#introduce .col-lg-10{	
+	padding-top: 240px;
+	padding-left: 30px;
+}
+#introduce .col-lg-10 h1{
+	font-size: 3rem;
+	line-height: 78px;
+	color: white;
+}
+#introduce .col-lg-10 p{
+	line-height: 36px;
+	font-size: 2.2rem;
+}
+#introduce .col-lg-10 p button{
+	margin-top: 20px;
+	padding: 10px 30px;
+	line-height: 36px;
+	font-size: 1.8rem;	
+	border-radius: 8px;
+}
+/*支持主流游戏开发平台*/
+#angle_down{
+	height: 100px;
+}
+#angle_down .down {
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 30px;	
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	margin-left: -30px;	
+}
+#support h1{
+	margin-top: 26px;
+	margin-bottom: 40px;
+	font-size:4.2rem;
+}
+#support p{
+	margin-top: 30px;
+	line-height: 36px;
+	font-size: 2rem;
+}
+#support ul{
+	height:100px;
+	width: 626px;
+}
+#support ul li{	
+	float: left;
+	margin-left: 40px;
+	font-size: 3rem;	
+}
+#support ul li a{
+	display: block;
+	width: 70px;
+	height: 70px;
+	line-height: 65px;
+	border: 1px solid #4D7DB1;
+	border-radius: 35px;
+	color: white;
+	background: #4D7DB1;
+}
+#support ul li a:hover{
+	color:#4D7DB1;
+	background: white;
+}
+/*详细游戏数据分析*/
+
+#content .row:nth-child(1){	
+	padding-top: 50px;
+	padding-bottom: 80px;
+	color: #586062;
+}
+#content .row:nth-child(2){	
+	padding-top: 50px;
+	padding-bottom: 80px;
+	background: #4679AE;
+	color: white;
+}
+#content .row:nth-child(3){
+	padding-top: 50px;
+	padding-bottom: 80px;
+	color: #586062;
+}
+#content .row:nth-child(4){
+	padding-top: 50px;
+	padding-bottom: 80px;
+	background: #4679AE;
+	color: white;
+}
+#content .row:nth-child(5){
+	padding-top: 50px;
+	padding-bottom: 80px;
+	color: #586062;
+}
+#content .row:nth-child(6){
+	padding-top: 50px;
+	padding-bottom: 80px;
+	background: #4679AE;
+	color: white;
+}
+#content .row:nth-child(6) h2{
+	margin-top: 60px;
+}
+#content .row .row_img{
+	padding: 20px 4%;
+}
+#content .row .row_p{
+	padding: 20px 4%;
+}
+#content .row h2{
+	font-size: 3rem;
+	line-height: 90px;
+}
+#content .row p{
+	font-size: 1.8rem;
+}
+/*移动App*/
+#mobile {
+	height: 700px;
+	background-size: 2000px;
+}
+#mobile .col-lg-10 {
+	padding-top: 180px;
+	padding-left: 50px;	
+}
+#mobile .col-lg-10 h1 {
+	font-size: 3.8rem;	
+}
+#mobile .col-lg-10 p {
+	font-size: 2.4rem;
+	line-height: 60px;
+}
+#mobile button i{
+	float: left;
+	font-size: 2.6rem;
+	display: inline-block;
+	margin-right: 10px;
+}
+#mobile .mobile_btn .qr{
+	margin-left: 30px;
+	height: 110px;
+	width: 110px;
+	border:1px solid #b3b3b3;
+}
+/*footer*/
+#footer img{
+	width: 190px;
+	margin-top: 120px;
+	margin-bottom: 30px;
+}
+#footer h3{
+	font-size: 2.4rem;
+}
+#footer p{
+	width: 420px;
+	margin-top: 30px;
+	margin-bottom: 120px;
+}
+#footer a{
+	font-size: 1.6rem;	
+	margin: 12px;
+	padding: 12px 18px;
+}
+
+/*copyright*/
+
+}
+/*平板电脑及台式机样式 !结束*/
